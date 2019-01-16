@@ -29,6 +29,13 @@ public class SunsetFragment extends Fragment {
         mSunView = view.findViewById(R.id.sun);
         mSkyView = view.findViewById(R.id.sky);
 
+        mSceneView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startAnimation();
+            }
+        });
+
         return view;
     }
 

@@ -12,6 +12,10 @@ import android.view.ViewGroup;
 
 public class SunsetFragment extends Fragment {
 
+    private View mSceneView;
+    private View mSunView;
+    private View mSkyView;
+
     public static SunsetFragment newInstance(){
         return new SunsetFragment();
     }
@@ -19,6 +23,10 @@ public class SunsetFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_sunset, container, false);
+
+        mSceneView = view;
+        mSunView = view.findViewById(R.id.sun);
+        mSkyView = view.findViewById(R.id.sky);
 
         return view;
     }
